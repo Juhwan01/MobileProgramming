@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="onClear"
+            android:src="@drawable/easer" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="Ondrawin"
+            android:src="@drawable/brash" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="OngetTri"
+            android:src="@drawable/save" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="OnSetting"
+            android:src="@drawable/new_pic" />
+
+    </LinearLayout>
+
+    <com.example.lab9.SingleTouchView
+        android:id="@+id/drawing"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paint_colors"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#000000"
+            android:onClick="clicked"
+            android:tag="#000000" />
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#D30000"
+            android:onClick="clicked"
+            android:tag="#D30000" />
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#FF5722"
+            android:onClick="clicked"
+            android:tag="#FF5722" />
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#FFEB3B"
+            android:onClick="clicked"
+            android:tag="#FFEB3B" />
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#4CAF50"
+            android:onClick="clicked"
+            android:tag="#4CAF50" />
+
+        <ImageButton
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="#FFFFFF"
+            android:onClick="clicked"
+            android:tag="#FFFFFF" />
+
+    </LinearLayout>
+</LinearLayout>

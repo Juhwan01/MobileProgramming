@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:text="Number 1"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="Number 2"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:text="+"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:text="-"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:text="*"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonDivide"
+        android:text="/"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:text="Result"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"/>
+
+    <EditText
+        android:id="@+id/editResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
