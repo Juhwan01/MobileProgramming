@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안드로이드 프로그래밍에 가장 많이 사용되는 언어는?"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewQuestion"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/radioC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"/>
+
+        <RadioButton
+            android:id="@+id/radioPython"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Python"/>
+
+        <RadioButton
+            android:id="@+id/radioCPlusPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C++"/>
+
+        <RadioButton
+            android:id="@+id/radioJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Java"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCheckResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결과 확인"
+        android:layout_below="@id/radioGroupOptions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

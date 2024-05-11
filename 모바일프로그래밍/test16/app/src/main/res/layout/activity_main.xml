@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="퀴즈 앱입니다"
+        android:textSize="24sp"
+        android:layout_centerInParent="true"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnStartQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="startQuiz"/>
+
+</RelativeLayout>

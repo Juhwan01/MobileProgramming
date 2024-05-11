@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/op_normal"
+        android:title="일반 메뉴" />
+    <item  android:id="@+id/op_sub"
+        android:title="서브 메뉴"
+        android:orderInCategory="2">
+        <menu>
+            <item android:id="@+id/sub1"
+                android:title="서브1" />
+            <item android:id="@+id/sub2"
+                android:title="서브2" />
+        </menu>
+    </item>
+    <item android:id="@+id/op_check"
+        android:orderInCategory="1"
+        android:checkable="true"
+        android:checked="true"
+        android:title="선택 메뉴" />
+    <item android:id="@+id/op_icon"
+        android:title="아이콘 메뉴"
+        android:icon="@drawable/w"
+        app:showAsAction="always"/>
+
+</menu>

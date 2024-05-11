@@ -238,11 +238,41 @@ public class SingleTouchView extends View {
     }
 
     private void moveSelectedArea(float deltaX, float deltaY) {
+        // 선택된 영역의 왼쪽 상단 좌표와 오른쪽 하단 좌표를 계산합니다.
+        float left = Math.min(fart_x_poit, end_x_poit);
+        float top = Math.min(fart_y_poit, end_y_poit);
+        float right = Math.max(fart_x_poit, end_x_poit);
+        float bottom = Math.max(fart_y_poit, end_y_poit);
+
+        // 선택된 영역 내에 있는 도형들을 이동합니다.
         for (Path path : pathList) {
-            path.offset(deltaX, deltaY);
-            System.out.println(path);
+            RectF bounds = new RectF();
+            path.computeBounds(bounds, true);
+
+            // 도형의 왼쪽 상단 좌표와 오른쪽 하단 좌표를 계산합니다.
+            float shapeLeft = bounds.left;
+            float shapeTop = bounds.top;
+            float shapeRight = bounds.right;
+            float shapeBottom = bounds.bottom;
+
+            // 도형이 선택된 영역과 교차하는지 확인합니다.
+            boolean intersects = !(right < shapeLeft || left > shapeRight || bottom < shapeTop || top > shapeBottom);
+
+            // 도형이 선택된 영역과 교차하는 경우에만 이동합니다.
+            if (intersects) {
+                path.offset(deltaX, deltaY);
+            }
         }
+
+        // 비트맵 캔버스를 지우고, 업데이트된 경로를 다시 그립니다.
+        bitmapCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+        for (Path p : pathList) {
+            bitmapCanvas.drawPath(p, drawPaint);
+        }
+        invalidate();
     }
+
+
 
     public void ClearCan() {
         drawCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
